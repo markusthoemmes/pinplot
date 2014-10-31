@@ -1,0 +1,13 @@
+{
+  "name": "storymapper-backend",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Markus Thömmes <markusthoemmes@me.com>",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^1.4.19",
+    "mongojs": "^0.15.1",
+    "restify": "^2.8.3"
+  }
+}
