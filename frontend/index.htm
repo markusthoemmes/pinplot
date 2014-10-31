@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Hackathon Stuttgart - Storymapper</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- Le styles -->
+        <link href="/storymapper/frontend/css/style.css" media="screen" rel="stylesheet" type="text/css">
+        <link href="/storymapper/frontend/css/reset.css" media="screen" rel="stylesheet" type="text/css">
+        <link href="/storymapper/frontend/css/application.css" media="screen" rel="stylesheet" type="text/css">
+        <link href="/storymapper/frontend/css/jQRangeSlider/classic.css" media="screen" rel="stylesheet" type="text/css">
+        <link href="/storymapper/frontend/img/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+        <!-- Scripts -->
+        <!--[if lt IE 9]><script type="text/javascript" src="/storymapper/frontend/js/html5shiv.js"></script><![endif]-->
+        <!--[if lt IE 9]><script type="text/javascript" src="/storymapper/frontend/js/respond.min.js"></script><![endif]-->
+        <script type="text/javascript" src="/storymapper/frontend/js/jquery.min.js"></script>
+        <script type="text/javascript" src="/storymapper/frontend/js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="/storymapper/frontend/js/jQRangeSlider/jQAllRangeSliders-min.js"></script>
+    </head>
+    <body>
+        <div id="fullscreen-container">
+            <div id="wrapper" style="margin: 0px; padding: 0px; width: 100%; height: 100px;">
+                <script type="text/javascript"
+                        src="http://maps.googleapis.com/maps/api/js">
+                </script>
+                <script type="text/javascript">
+
+                    //
+                    $(document).ready(function () {
+
+                        var mapOptions = {
+                            center: new google.maps.LatLng(-34.397, 150.644),
+                            zoom: 8,
+                            mapTypeId: google.maps.MapTypeId.ROADMAP
+                        };
+
+                        // 
+                        var map = new google.maps.Map(document.getElementById("map"),
+                                mapOptions);
+
+
+                        //            // Initialize jQuery slider
+                        $("#pageline").rangeSlider();
+                        $("#timeline").dateRangeSlider();
+
+                        // @TODO: use data 
+                        $("#pageline").rangeSlider("option", "bounds", {min: 0, max: 90});
+
+                        // @TODO: use data 
+                        $("#timeline").dateRangeSlider("option", "bounds", {
+                            min: new Date(2012, 0, 1),
+                            max: new Date(2012, 11, 31)
+                        });
+                    });
+
+                </script>
+
+                <div id="navigation">
+
+                </div>
+                <div id="map"></div>
+                <div id="search"><input id="search-input" type="text" value="search"/></div>
+                <div id="lines">
+                    <div id="pageline" style="border: red solid 1px;"></div>
+                    <div id="timeline" style="border: blue solid 1px;"></div>
+                </div>            </div>
+        </div>
+    </body>
+</html>
