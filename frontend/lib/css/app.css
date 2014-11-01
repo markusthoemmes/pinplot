@@ -13,11 +13,8 @@ body, h1, h2, h3, h4, h5, a, p, span, i {
   font-family: "FreightSansBook", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; 
 }
 
-#main {
+#main, img {
 	max-width: none;
-	/*display: flex;
-	align-items: stretch;*/
-
 }
 
 #map {
