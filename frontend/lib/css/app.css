@@ -27,6 +27,11 @@ body, h1, h2, h3, h4, h5, a, p, span, i {
 	height: 100vh;
 }
 
+#description-container .fact-key {
+    text-transform: uppercase;
+}
+
+
 #search {
     position: absolute; 
     top:28px;
