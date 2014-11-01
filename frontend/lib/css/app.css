@@ -29,7 +29,6 @@ body, h1, h2, h3, h4, h5, a, p, span, i {
 #search {
     position: absolute; 
     top:28px;
-    z-index: 2;
 }
 
 #search-input {
@@ -40,8 +39,14 @@ body, h1, h2, h3, h4, h5, a, p, span, i {
     height: 35px;
 }
 
-#timelines {
+#pageline {
+    position: absolute;
+    bottom: 60px;
+}
+
+#timeline {
     position: absolute;
     bottom: 40px;
-    z-index: 2;
 }
+
+.overlay { z-index: 2; }
