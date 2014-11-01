@@ -1,0 +1,29 @@
+@import url('normalize.css');
+@import url('fonts.css');
+@import url('foundation.css');
+
+/* 
+	red: #FA6666
+	green: #98E466
+	yellow: #FBEF69
+	blue: #4BBCF6
+*/
+
+body, h1, h2, h3, h4, h5, a, p, span, i {
+  font-family: "FreightSansBook", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; 
+}
+
+#main {
+	max-width: none;
+	/*display: flex;
+	align-items: stretch;*/
+
+}
+
+#map {
+	background: #fff;
+}
+#sidebar {
+	background: #eee;
+	height: 100%;
+}
