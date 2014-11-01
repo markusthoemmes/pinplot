@@ -18,12 +18,12 @@ server.get('/book/:id', function(req, res, next) {
 
 	if(req.params.id === '') {
 		db.books.find(function(err, docs) {
-	    	res.send({books: docs});
+	    	res.send(docs);
 		});
 	}
 	else {
 		db.books.findOne({_id: mongojs.ObjectId(req.params.id)},function(err, docs) {
-	    	res.send({books: docs});
+	    	res.send(docs);
 		});
 	}
 	return next();
