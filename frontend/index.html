@@ -1,84 +1,86 @@
 <!DOCTYPE html>
 
 <html class="no-js" lang="en">
-<head>
-    <title>StoryMapper</title>
-	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <head>
+        <title>StoryMapper</title>
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
 
-	<meta name="author" content="Achim, George, Johannes, Markus" />
-	<meta name="description" xml:lang="de" lang="de" content="Mapping stories with open data for an enhanced reading experience and understanding" />
-	<meta name="keywords" xml:lang="de" lang="de" content="stories, mapping, open, data" />
+        <meta name="author" content="Achim, George, Johannes, Markus" />
+        <meta name="description" xml:lang="de" lang="de" content="Mapping stories with open data for an enhanced reading experience and understanding" />
+        <meta name="keywords" xml:lang="de" lang="de" content="stories, mapping, open, data" />
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    
-    <link rel="stylesheet" href="lib/css/app.css" type="text/css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<script type="text/javascript" src="lib/js/vendor/jquery.js"></script>
-	<script src="lib/js/vendor/modernizr.js"></script>
-
-    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js"></script>
+        <link rel="stylesheet" href="lib/css/app.css" type="text/css">
         
-</head>
+        <script type="text/javascript" src="lib/js/vendor/jquery.js"></script>
+        <script src="lib/js/vendor/modernizr.js"></script>
 
-<body>
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js"></script>
+
+    </head>
+
+    <body>
+
+        <script type="text/javascript">
+
+            //
+            $(document).ready(function () {
+
+                var mapOptions = {
+                    center: new google.maps.LatLng(-34.397, 150.644),
+                    zoom: 8,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+
+                // 
+                var map = new google.maps.Map(document.getElementById("map"),
+                        mapOptions);
+
+
+                //            // Initialize jQuery slider
+                $("#pageline-slider").rangeSlider();
+                $("#timeline-slider").dateRangeSlider();
+
+                // @TODO: use data 
+                $("#pageline-slider").rangeSlider("option", "bounds", {min: 0, max: 90});
     
-    <script type="text/javascript">
+                // @TODO: use data 
+                $("#timeline-slider").dateRangeSlider("option", "bounds", {
+                    min: new Date(2012, 0, 1),
+                    max: new Date(2012, 11, 31)
+                });
+            });
 
-        //
-        $(document).ready(function () {
-
-            var mapOptions = {
-                center: new google.maps.LatLng(-34.397, 150.644),
-                zoom: 8,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            };
-
-            // 
-            var map = new google.maps.Map(document.getElementById("map"),
-                    mapOptions);
-
-
-            //            // Initialize jQuery slider
-            $("#pageline-container").rangeSlider();
-            $("#timeline-container").dateRangeSlider();
-
-//            // @TODO: use data 
-//            $("#pageline").rangeSlider("option", "bounds", {min: 0, max: 90});
-//
-//            // @TODO: use data 
-//            $("#timeline").dateRangeSlider("option", "bounds", {
-//                min: new Date(2012, 0, 1),
-//                max: new Date(2012, 11, 31)
-//            });
-        });
-
-    </script>
-    <div id="main" class="row">
-        <div id="sidebar" class="large-6 columns"><h1>Sidebar</h1></div>
-        <div id="map" class="large-18 columns"></div>
-    </div>
-    
-    <div id="search" class="row overlay">
-        <div class="large-14 large-offset-8 columns">
-            <input id="search-input" type="text" value="Book search" />
+        </script>
+        <div id="main" class="row">
+            <div id="sidebar" class="large-6 columns"><h1>Homo Faber</h1><br /><span id="author">Max Frisch</span></div>
+            <div id="map" class="large-18 columns"></div>
         </div>
-    </div>
-    
-    <div id="pageline" class="row overlay">
-        <div id="pageline-container" class="large-16 large-offset-7 columns" style="border: red solid 1px;"></div>
-    </div>
-    <div id="timeline" class="row overlay">
-        <div id="timeline-container" class="large-16 large-offset-7 columns" style="border: blue solid 1px;"></div>
-    </div>
-    
-	<script type="text/javascript" src="lib/js/vendor/jquery.js"></script>
-	<script type="text/javascript" src="lib/js/vendor/fastclick.js"></script>
 
-    <script type="text/javascript" src="lib/js/jquery/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="lib/js/jquery/jQRangeSlider/jQAllRangeSliders-min.js"></script>
+        <div id="search" class="row overlay">
+            <div class="large-14 large-offset-8 columns">
+                <input id="search-input" type="text" value="Book search" />
+            </div>
+        </div>
 
-	<script type="text/javascript" src="lib/js/foundation.min.js"></script>
+        <div id="pageline" class="row overlay">
+            <div id="pageline-container" class="large-16 large-offset-7 columns" style="">
+                <div id="pageline-slider"></div>
+            </div>
+        </div>
+        <div id="timeline" class="row overlay">
+            <div id="timeline-container" class="large-16 large-offset-7 columns" style="">
+                <div id="timeline-slider"></div>
+            </div>
+        </div>
 
-    
-</body>
+        <script type="text/javascript" src="lib/js/vendor/jquery.js"></script>
+        <script type="text/javascript" src="lib/js/vendor/fastclick.js"></script>
+
+        <script type="text/javascript" src="lib/js/jquery/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="lib/js/jquery/jQRangeSlider/jQAllRangeSliders-min.js"></script>
+
+        <script type="text/javascript" src="lib/js/foundation.min.js"></script>
+    </body>

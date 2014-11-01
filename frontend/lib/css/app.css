@@ -1,6 +1,8 @@
 @import url('normalize.css');
 @import url('fonts.css');
 @import url('foundation.css');
+@import url('slider-customization.css');
+@import url('jQRangeSlider/classic.css');
 
 /* 
 	red: #FA6666
@@ -41,12 +43,14 @@ body, h1, h2, h3, h4, h5, a, p, span, i {
 
 #pageline {
     position: absolute;
-    bottom: 60px;
+    bottom: 100px;
+    height: 40px;
 }
 
 #timeline {
     position: absolute;
     bottom: 40px;
+    height: 40px;
 }
 
 .overlay { z-index: 2; }
