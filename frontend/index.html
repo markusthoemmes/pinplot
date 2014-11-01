@@ -12,10 +12,60 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	    
-    <link rel="stylesheet" href="lib/css/app.css" type="text/css"></head>
+    <link rel="stylesheet" href="lib/css/app.css" type="text/css">
+    
+    <script type="text/javascript" src="lib/js/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/js/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="lib/js/jquery/jQRangeSlider/jQAllRangeSliders-min.js"></script>
+    
+    <script type="text/javascript"
+            src="http://maps.googleapis.com/maps/api/js">
+    </script>
+</head>
+
 <body>
-	<div id="main" class="row">
-	  <div id="sidebar" class="large-6 columns"><h1>Sidebar</h1></div>
-	  <div id="map" class="large-18 columns">Map content</div>
-	</div>
+    
+    <script type="text/javascript">
+
+        //
+        $(document).ready(function () {
+
+            var mapOptions = {
+                center: new google.maps.LatLng(-34.397, 150.644),
+                zoom: 8,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+
+            // 
+            var map = new google.maps.Map(document.getElementById("map"),
+                    mapOptions);
+
+
+            //            // Initialize jQuery slider
+//            $("#pageline").rangeSlider();
+//            $("#timeline").dateRangeSlider();
+
+//            // @TODO: use data 
+//            $("#pageline").rangeSlider("option", "bounds", {min: 0, max: 90});
+//
+//            // @TODO: use data 
+//            $("#timeline").dateRangeSlider("option", "bounds", {
+//                min: new Date(2012, 0, 1),
+//                max: new Date(2012, 11, 31)
+//            });
+        });
+
+    </script>
+    <div id="main" class="row">
+        <div id="sidebar" class="large-6 columns"><h1>Sidebar</h1></div>
+        <div id="map" class="large-18 columns"></div>
+    </div>
+    
+    <div id="search" class="row overlay">
+        <div class="large-14 large-offset-8 columns">
+            <input id="search-input" type="text" value="Book search" />
+        </div>
+    </div>
+    <div id="timelines" class="row overlay"></div>
+    
 </body>

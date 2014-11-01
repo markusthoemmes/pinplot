@@ -22,8 +22,29 @@ body, h1, h2, h3, h4, h5, a, p, span, i {
 
 #map {
 	background: #fff;
+        height: 100vh;
 }
 #sidebar {
 	background: #eee;
-	height: 100%;
+	height: 100vh;
+}
+
+#search {
+    position: absolute; 
+    top:28px;
+    z-index: 2;
+}
+
+#search-input {
+    width: 100%; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: #FFF; 
+    border: 0; 
+    height: 35px;
+}
+
+#timelines {
+    position: absolute;
+    bottom: 40px;
+    z-index: 2;
 }
