@@ -8,6 +8,7 @@
   "dependencies": {
     "mongodb": "^1.4.19",
     "mongojs": "^0.15.1",
+    "request": "^2.47.0",
     "restify": "^2.8.3"
   }
 }

@@ -15,7 +15,6 @@
         <link rel="stylesheet" href="lib/css/app.css" type="text/css">
         <link rel="stylesheet" href="lib/css/vis.css" type="text/css">
 
-        <script type="text/javascript" src="lib/js/vendor/jquery.js"></script>
         <script src="lib/js/vendor/modernizr.js"></script>
 
         <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js"></script>
@@ -23,7 +22,15 @@
     </head>
 
 <body>
+    <script type="text/javascript" src="lib/js/vendor/jquery.js"></script>
+    <script type="text/javascript" src="lib/js/vendor/fastclick.js"></script>
+
+    <script type="text/javascript" src="lib/js/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="lib/js/jquery/jQRangeSlider/jQAllRangeSliders-min.js"></script>
+
+    <script type="text/javascript" src="lib/js/foundation.min.js"></script>
     <script type="text/javascript" src="lib/js/underscore-min.js"></script>
+    <script type="text/javascript" src="lib/js/typeahead.min.js"></script>
     <script type="text/javascript" src="lib/js/vis.js"></script>
     <script type="text/javascript" src="js/data.js"></script>
     <script type="text/javascript" src="js/map.js"></script>
@@ -32,6 +39,9 @@
 
         //
         $(document).ready(function () {
+            
+            // Initialize FOundation Framework
+            $(document).foundation();
 
             // Run this 
             app.run({"appData" : { "apiURL" : 'http://192.168.1.55:8080'}});
@@ -129,8 +139,8 @@
         </div>
     </div>
     
-    <div id="characters" class="row overlay">
-        <div id="character-container" class="large-offset-16 large-7 columns">
+    <div id="characters">
+        <div id="character-container">
         </div>
     </div>
     <div id="pageline" class="row overlay">
@@ -143,11 +153,5 @@
         </div>
     </div>
 
-    <script type="text/javascript" src="lib/js/vendor/jquery.js"></script>
-    <script type="text/javascript" src="lib/js/vendor/fastclick.js"></script>
-
-    <script type="text/javascript" src="lib/js/jquery/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="lib/js/jquery/jQRangeSlider/jQAllRangeSliders-min.js"></script>
-
-    <script type="text/javascript" src="lib/js/foundation.min.js"></script>
+    
 </body>

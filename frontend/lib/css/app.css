@@ -38,21 +38,69 @@ body, h1, h2, h3, h4, h5, a, p, span, i {
 }
 
 #search-input {
-    width: 100%; 
+    width: 500px; 
     background-color: rgba(0, 0, 0, 0.5); 
     color: #FFF; 
     border: 0; 
     height: 35px;
 }
 
+.tt-query {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+.tt-hint {
+    color: #999999;
+}
+.tt-dropdown-menu {
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 3px;
+    padding: 8px 0;
+    width: 500px;
+}
+.tt-suggestion {
+    font-size: 24px;
+    line-height: 24px;
+    padding: 3px 20px;
+}
+.tt-suggestion.tt-is-under-cursor {
+    background-color: #0097CF;
+    color: #FFFFFF;
+}
+.tt-suggestion p {
+    margin: 0;
+}
+
 #characters {
     position: absolute;
     top: 150px;
+    right:0px;
+    display:inline;
 }
 
 #character-container div {
+    display:inline;
     float: right;
     clear: both;
+}
+
+#characters label {
+    padding:10px;
+    background:rgba(255, 255, 255, 0.6);
+    margin-bottom:5px;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    user-select:none;
+}
+
+#characters label.checked {
+    background:#98E466;
+}
+
+#characters input {
+    display:none;
 }
 
 #pageline {

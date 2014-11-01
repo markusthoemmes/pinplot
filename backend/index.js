@@ -1,5 +1,17 @@
 var restify = require('restify');
 var mongojs = require('mongojs');
+var request = require('request');
+
+request('http://de.wikipedia.org/w/api.php?action=query&prop=extracts&format=json&exintro=&titles=Homo_faber_(Roman)', function(err, res, body) {
+	if (!err && res.statusCode == 200) {
+    	var data = JSON.parse(body);
+
+    	var pageId;
+    	for(pageId in data.query.pages) break;
+
+    	var extract = data.query.pages[pageId].extract.match(/<p>(.*?)<\/p>/g)[0];
+	}
+});
 
 var server = restify.createServer({
 	name: 'StoryMapper',
@@ -21,17 +33,6 @@ server.get('/book/:id', function(req, res, next) {
 	    	res.send(docs);
 		});
 	}
-	else {
-		db.books.findOne({_id: mongojs.ObjectId(req.params.id)},function(err, docs) {
-	    	res.send(docs);
-		});
-	}
-	return next();
-});
-
-server.post('/book', function(req, res, next) {
-	console.log(req.params);
-	res.send("done");
 	return next();
 });
 
