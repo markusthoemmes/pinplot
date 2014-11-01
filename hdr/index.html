@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+    <head>
+        <title>StoryMapper</title>
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+
+        <meta name="author" content="Achim, George, Johannes, Markus" />
+        <meta name="description" xml:lang="de" lang="de" content="Mapping stories with open data for an enhanced reading experience and understanding" />
+        <meta name="keywords" xml:lang="de" lang="de" content="stories, mapping, open, data" />
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="lib/css/app.css" type="text/css">
+        <link rel="stylesheet" href="lib/css/vis.css" type="text/css">
+
+        <script src="lib/js/vendor/modernizr.js"></script>
+
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js"></script>
+
+    </head>
+
+<body>
+    <script type="text/javascript" src="lib/js/vendor/jquery.js"></script>
+    <script type="text/javascript" src="lib/js/vendor/fastclick.js"></script>
+
+    <script type="text/javascript" src="lib/js/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="lib/js/jquery/jQRangeSlider/jQAllRangeSliders-min.js"></script>
+
+    <script type="text/javascript" src="lib/js/foundation.min.js"></script>
+    <script type="text/javascript" src="lib/js/underscore-min.js"></script>
+    <script type="text/javascript" src="lib/js/typeahead.min.js"></script>
+    <script type="text/javascript" src="lib/js/vis.js"></script>
+    <script type="text/javascript" src="js/data.js"></script>
+    <script type="text/javascript" src="js/map.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript">
+
+        //
+        $(document).ready(function () {
+            
+            // Initialize FOundation Framework
+            $(document).foundation();
+
+            // Run this 
+            app.run({"appData" : { "apiURL" : 'http://192.168.1.57:8080'}});
+
+        });
+
+    </script>
+    <div id="main" class="row">
+        <div id="sidebar" class="large-6 columns">
+            <div class="row">
+                <h1 class="columns large-24" id="title">Homo Faber</h1>    
+            </div>
+            <div class="row">
+                <img class="columns large-4" id="picture" src="https://www.deutsche-digitale-bibliothek.de/binary/O6KMW5SU62VCMQK2AUFKLE243DMLUR7O/mvpr/1.jpg" alt="" /> 
+                <span class="columns large-20" id="author">Max Frisch<br />Published 1981 in Zürich</span>
+            </div>
+            
+            
+            <dl class="accordion" data-accordion style="margin-top: 10px; max-height: 80vh;"> 
+                <dd class="accordion-navigation"> 
+                    <a href="#panel1">Facts</a> 
+                    <div id="panel1" class="content active" style="overflow: auto;"> 
+                        
+                        <div class="row">
+                            <span class="columns large-24" id="description" style="">Homo faber. Ein Bericht ist ein Roman des Schweizer Schriftstellers Max Frisch. Nach seiner Veröffentlichung im Oktober 1957 entwickelte er sich zum Bestseller und gilt als eines der bekanntesten Prosawerke Max Frischs. Der Roman wurde vielfach übersetzt und sowohl in literaturwissenschaftlichen Untersuchungen als auch im Schulunterricht häufig behandelt. Eine Verfilmung Volker Schlöndorffs kam 1991 als Homo Faber in die Kinos.</span>
+                        </div>
+                        <div id="description-facts" style="margin: 10px 0 10px 0;">
+                            <div class="row">
+                                <span class="fact-key columns large-8">Type</span><span class="fact-value columns large-16">Monografie</span>
+                            </div>
+                            <div class="row">
+                                <span class="fact-key columns large-8">Language</span><span class="fact-value columns large-16">German</span>
+                            </div>
+                            <div class="row">
+                                <span class="fact-key columns large-8">Series</span><span class="fact-value columns large-16">Series from ALU Freiburg</span>
+                            </div>
+                        </div>
+                    </div> 
+                </dd> 
+                <dd class="accordion-navigation"> 
+                    <a href="#panel2">Characters</a> 
+                    <div id="panel2" class="content"> Panel 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div> 
+                </dd> 
+                <dd class="accordion-navigation"> 
+                    <a href="#panel4">Content</a> 
+                    <div id="panel4" class="content" style="overflow: auto;">Erste Station. Wir starteten in La Guardia, New York, mit dreistündiger Verspätung infolge Schneestürmen. Unsere Maschine war, wie üblich auf dieser Strecke, eine Super-Constellation. Ich richtete mich sofort zum Schlafen, es war Nacht. Wir warteten noch weitere vierzig Minuten draußen auf der Piste, Schnee vor den Scheinwerfern, Pulverschnee, Wirbel über der Piste, und was mich nervös machte, so daß ich nicht sogleich schlief, war nicht die Zeitung, die unsere Stewardeß verteilte, First Pictures Of World's Greatest Air Crash In Nevada*, eine Neuigkeit, die ich schon am Mittag gelesen hatte, sondern einzig und allein diese Vibration in der stehenden Maschine mit laufenden Motoren - dazu der junge Deutsche neben mir, der mir sogleich auffiel, ich weiß nicht wieso, er fiel auf, wenn er den Mantel auszog, wenn er sich setzte und sich die Bügelfalten zog, wenn er überhaupt nichts tat, sondern auf den Start wartete wie wir alle und einfach im Sessel saß, ein Blonder mit rosiger Haut, der sich sofort vorstellte, noch bevor man die Gürtel geschnallt hatte. Seinen Namen hatte ich überhört, die Motoren dröhnten, einer nach dem andern auf Vollgasprobe - Ich war todmüde. Ivy* hatte drei Stunden lang, während wir auf die verspätete Maschine warteten, auf mich eingeschwatzt, obschon sie wußte, daß ich grundsätzlich nicht heirate. Ich war froh, allein zu sein. Endlich ging's los - Ich habe einen Start bei solchem Schneetreiben noch nie erlebt, kaum hatte sich unser Fahrgestell von der weißen Piste gehoben, war von den gelben Bodenlichtern nichts mehr zu sehen, kein Schimmer, später nicht einmal ein Schimmer von Manhattan, so schneite es. Ich sah nur das grüne Blinklicht an unsrer Tragfläche, die heftig schwankte, zeitweise wippte; für Sekunden verschwand sogar dieses grüne Blinklicht im Nebel, man kam sich wie ein Blinder vor. </div> 
+                </dd>
+            </dl>
+            
+            
+            
+            
+            
+            <div id="tab-containers" style="margin-top: 10px; display: none;">
+                
+                <!-- -->
+                <div id="description-container" class="tab-container" style="">
+
+                    <div class="expandable">
+                        <div class="row">
+                            <span class="columns large-24" id="description" style="">Homo faber. Ein Bericht ist ein Roman des Schweizer Schriftstellers Max Frisch. Nach seiner Veröffentlichung im Oktober 1957 entwickelte er sich zum Bestseller und gilt als eines der bekanntesten Prosawerke Max Frischs. Der Roman wurde vielfach übersetzt und sowohl in literaturwissenschaftlichen Untersuchungen als auch im Schulunterricht häufig behandelt. Eine Verfilmung Volker Schlöndorffs kam 1991 als Homo Faber in die Kinos.</span>
+                        </div>
+                        <div id="description-facts" style="margin: 10px 0 10px 0;">
+                            <div class="row">
+                                <span class="fact-key columns large-8">Type</span><span class="fact-value columns large-16">Monografie</span>
+                            </div>
+                            <div class="row">
+                                <span class="fact-key columns large-8">Language</span><span class="fact-value columns large-16">German</span>
+                            </div>
+                            <div class="row">
+                                <span class="fact-key columns large-8">Series</span><span class="fact-value columns large-16">Series from ALU Freiburg</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="expand-toggler">
+                        <div class="columns large-24" id="description-toggle" style="border-bottom: #b2b2b2 solid 1px; text-align: center; cursor: pointer;">toggle</div>
+                    </div>
+                </div>
+                
+                <!-- -->
+                <div id="plot-container" class="tab-container" style="display: none; overflow: auto;">
+                    <div class="">Erste Station. Wir starteten in La Guardia, New York, mit dreistündiger Verspätung infolge Schneestürmen. Unsere Maschine war, wie üblich auf dieser Strecke, eine Super-Constellation. Ich richtete mich sofort zum Schlafen, es war Nacht. Wir warteten noch weitere vierzig Minuten draußen auf der Piste, Schnee vor den Scheinwerfern, Pulverschnee, Wirbel über der Piste, und was mich nervös machte, so daß ich nicht sogleich schlief, war nicht die Zeitung, die unsere Stewardeß verteilte, First Pictures Of World's Greatest Air Crash In Nevada*, eine Neuigkeit, die ich schon am Mittag gelesen hatte, sondern einzig und allein diese Vibration in der stehenden Maschine mit laufenden Motoren - dazu der junge Deutsche neben mir, der mir sogleich auffiel, ich weiß nicht wieso, er fiel auf, wenn er den Mantel auszog, wenn er sich setzte und sich die Bügelfalten zog, wenn er überhaupt nichts tat, sondern auf den Start wartete wie wir alle und einfach im Sessel saß, ein Blonder mit rosiger Haut, der sich sofort vorstellte, noch bevor man die Gürtel geschnallt hatte. Seinen Namen hatte ich überhört, die Motoren dröhnten, einer nach dem andern auf Vollgasprobe - Ich war todmüde. Ivy* hatte drei Stunden lang, während wir auf die verspätete Maschine warteten, auf mich eingeschwatzt, obschon sie wußte, daß ich grundsätzlich nicht heirate. Ich war froh, allein zu sein. Endlich ging's los - Ich habe einen Start bei solchem Schneetreiben noch nie erlebt, kaum hatte sich unser Fahrgestell von der weißen Piste gehoben, war von den gelben Bodenlichtern nichts mehr zu sehen, kein Schimmer, später nicht einmal ein Schimmer von Manhattan, so schneite es. Ich sah nur das grüne Blinklicht an unsrer Tragfläche, die heftig schwankte, zeitweise wippte; für Sekunden verschwand sogar dieses grüne Blinklicht im Nebel, man kam sich wie ein Blinder vor.</div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div id="map" class="large-18 columns"></div>
+    </div>
+    
+    <div id="search" class="row overlay">
+        <div class="large-14 large-offset-8 columns">
+            <input id="search-input" type="text" value="Book search" />
+        </div>
+    </div>
+    
+    <div id="characters">
+        <div id="character-container">
+        </div>
+    </div>
+    <div id="pageline" class="row overlay">
+        <div id="pageline-container" class="large-19 large-offset-7 columns">
+            <div id="pageline-begin"></div>
+            <div id="pageline-end"></div>
+            <div id="pageline-slider"></div>
+        </div>
+    </div>
+    <div id="timeline" class="row overlay">
+        <div id="timeline-container" class="large-19 large-offset-7 columns">
+            <div id="timeline-begin"></div>
+            <div id="timeline-end"></div>
+            <div id="timeline-wrapper"></div>
+        </div>
+    </div>
+
+    
+</body>

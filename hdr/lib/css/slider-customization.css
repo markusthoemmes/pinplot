@@ -1,0 +1,106 @@
+/**
+ * default development theme for jQRangeSlider
+ * Using fam fam icon set from Mark James, http://www.famfamfam.com/lab/icons/silk/ (Creative Commons Attribution 2.5 License)
+ */
+
+.ui-rangeSlider{
+	height:20px;
+}
+
+.ui-rangeSlider .ui-rangeSlider-innerBar{
+	height:20px;
+}
+
+.ui-rangeSlider .ui-rangeSlider-handle{
+	width:30px;
+	height:20px;
+	background:#AAA;
+	background:rgba(0,0,0, 0.5);
+	cursor:col-resize;
+}
+
+.ui-rangeSlider .ui-rangeSlider-bar{
+	margin: 1px 0;
+	background:#CCC;
+	background:rgba(0,0,0, 0.5);
+	height:20px;
+	cursor:move;
+	cursor:grab;
+	cursor: -moz-grab;
+
+	box-shadow:0px 3px 10px 2px rgba(0,0,0,0.4);
+}
+
+.ui-rangeSlider .ui-rangeSlider-bar.ui-draggable-dragging{
+	cursor:	-moz-grabbing;
+	cursor:grabbing;
+}
+
+.ui-rangeSlider-arrow{
+	height:16px;
+	margin:2px 0;
+	width:16px;
+	background-repeat:no-repeat;
+}
+
+.ui-rangeSlider-arrow.ui-rangeSlider-leftArrow{
+	background-image: url('icons-classic/resultset_previous.png');
+	background-position:center left;
+}
+
+.ui-rangeSlider-arrow.ui-rangeSlider-rightArrow{
+	background-image: url('icons-classic/resultset_next.png');
+	background-position:center right;
+}
+
+.ui-rangeSlider-arrow-inner{
+	display: none;
+}
+
+.ui-rangeSlider-container{
+	height:22px;
+}
+
+.ui-rangeSlider-withArrows .ui-rangeSlider-container{
+	margin:0 0px;
+}
+
+.ui-rangeSlider-noArrow .ui-rangeSlider-container{
+	margin:0;
+}
+
+.ui-rangeSlider-label{
+	background-image:url('icons-classic/label.png');
+	background-position:bottom center;
+	background-repeat:no-repeat;
+  white-space: nowrap;
+  cursor:col-resize;
+  color:#CCC;
+}
+
+.ui-rangeSlider-leftLabel .ui-rangeSlider-label-value {
+	position:relative;
+	left:30px;
+	bottom:3px;
+}
+
+.ui-rangeSlider-rightLabel .ui-rangeSlider-label-value {
+	position:relative;
+	right:30px;
+	bottom:3px;
+}
+
+.ui-rangeSlider-label-inner{
+	display:none;
+}
+
+/*
+ * Edit slider
+ */
+
+input.ui-editRangeSlider-inputValue{
+	width:3em;
+	vertical-align: middle;
+	text-align:center;
+}
+
