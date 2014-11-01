@@ -2,10 +2,11 @@
   "name" : "Homo faber Test",
   "data" : {
       "author" : {
-            "ref" : {
-                "source" : "ddb",            
-                "entity" : "118536109"
-            }
+            "name" : "Max Frisch",
+            "born" : "May 15, 1911 in Switzerland",
+            "death" : "April 4, 1991",
+            "picture" : "https://upload.wikimedia.org/wikipedia/en/thumb/c/c6/Max_Frisch.jpg/275px-Max_Frisch.jpg",
+            "url" : "https://en.wikipedia.org/wiki/Max_Frisch"
       },
       "description" : {
             "source" : "wikipedia",
