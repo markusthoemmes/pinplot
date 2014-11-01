@@ -57,12 +57,16 @@ body, h1, h2, h3, h4, h5, a, p, span, i {
 
 #pageline {
     position: absolute;
-    bottom: 80px;
+    bottom: 200px;
 }
 
 #timeline {
     position: absolute;
     bottom: 30px;
+}
+
+.vis.timeline {
+    background:#fff;
 }
 
 .overlay { z-index: 2; }

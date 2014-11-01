@@ -10,12 +10,17 @@ app.run = function(settingsObj) {
 
     appData.getBook('5454e93fe3118013501512b2', function(data) {
 
+    	data.events = _.sortBy(data.events, function(event) {
+    		return event.characterCount;
+    	});
+
     	var characters = _.map(data.events, function(event) {
     		return _.pluck(event.involved, 'name');
     	});
     	characters = _.unique(_.flatten(characters));
 
     	var filterCharacters = characters;
+    	var timelineData;
 
     	var $characters = $('#character-container');
     	_.each(characters, function(character) {
@@ -31,6 +36,10 @@ app.run = function(settingsObj) {
 	        _.each(characters, function(character) {
 	        	var charEvents = _.filter(events, function(event) {
 	        		return _.contains(_.pluck(event.involved, 'name'), character);
+	        	});
+
+	        	charEvents = _.sortBy(charEvents, function(event) {
+	        		return event.timestamp;
 	        	});
 
 	        	var coordinates = [];
@@ -50,9 +59,23 @@ app.run = function(settingsObj) {
 		            geodesic: true
 		        }));
 	        });
+
+	      	timelineData = new vis.DataSet({});
+	        for(var i = 0; i < events.length; i++) {
+	        	timelineData.add([{id:i, start: new Date(events[i].timestamp*1000), model: events[i]}]);
+	        }
+	        timeline.setItems(timelineData);
 	    };
 
+	    var timeline = new vis.Timeline(document.getElementById('timeline-container'));
 	    createObjects(map, filterCharacters, data.events);
+
+	    timeline.on('select', function(item) {
+	    	if(item.items.length > 0) {
+	    		var event = timelineData.get(item.items[0]).model;
+	    		appMap.map.setCenter(new google.maps.LatLng(event.location.lat, event.location.lon));
+	    	}
+	    });
 
 
 	    var pagelineSlider = $("#pageline-slider").rangeSlider({
@@ -60,17 +83,15 @@ app.run = function(settingsObj) {
 	        bounds: {min: data.events[0].characterCount, max: data.events[data.events.length - 1].characterCount},
 	        defaultValues: {min: data.events[0].characterCount, max: data.events[data.events.length - 1].characterCount}
 	    });
+
 	    pagelineSlider.bind('valuesChanging', function (e, sliderData) {
 	        appMap.clearMap();
 
 	        var events = helper.filterEvents(data.events, filterCharacters, 'characterCount', sliderData.values.min, sliderData.values.max);
 	        createObjects(map, filterCharacters, events);
-	    
-	        timelineSlider.dateRangeSlider('min', new Date(events[0].timestamp*1000));
-	        timelineSlider.dateRangeSlider('max', new Date(events[events.length - 1].timestamp*1000));
 	    });
 
-	    var timelineSlider = $('#timeline-slider').dateRangeSlider({
+	    /*var timelineSlider = $('#timeline-slider').dateRangeSlider({
 	    	step: {days: 1},
 	    	bounds: {min: new Date((data.events[0].timestamp-86400)*1000), max: new Date((data.events[data.events.length - 1].timestamp+86400)*1000)},
 	    	defaultValues: {min: new Date((data.events[0].timestamp-86400)*1000), max: new Date((data.events[data.events.length - 1].timestamp+86400)*1000)}
@@ -83,7 +104,7 @@ app.run = function(settingsObj) {
 
 	    	pagelineSlider.rangeSlider('min', events[0].characterCount);
 	    	pagelineSlider.rangeSlider('max', events[events.length-1].characterCount);
-	    });
+	    });*/
 
 	    $characters.on('change', 'input', function() {
 	    	filterCharacters = [];

@@ -3,53 +3,7 @@ appMap.map = null;
 appMap.objects = [];
 
 appMap.createMap = function(id, options) {
-	var styles = [
-		{
-		"featureType": "landscape.natural",
-		"stylers": [
-		  { "visibility": "on" },
-		  { "color": "#808080" },
-		  { "lightness": -26 },
-		  { "gamma": 0.66 }
-		]
-		},{
-		"featureType": "road",
-		"stylers": [
-		  { "visibility": "on" },
-		  { "saturation": -79 },
-		  { "lightness": -34 },
-		  { "hue": "#005eff" }
-		]
-		},{
-		"featureType": "water",
-		"stylers": [
-		  { "lightness": -51 },
-		  { "gamma": 0.38 },
-		  { "saturation": -88 }
-		]
-		},{
-		"featureType": "landscape.man_made",
-		"elementType": "geometry",
-		"stylers": [
-		  { "color": "#fbef69" }
-		]
-		},{
-		"elementType": "labels.text.stroke",
-		"stylers": [
-		  { "lightness": 17 },
-		  { "color": "#fbef69" },
-		  { "saturation": -37 }
-		]
-		},{
-		"featureType": "poi",
-		"stylers": [
-		  { "weight": 0.6 },
-		  { "color": "#808080" },
-		  { "visibility": "off" }
-		]
-		},{
-		"featureType": "administrative.land_parcel"  }
-	];
+	var styles = [ { "featureType": "administrative.province", "stylers": [ { "visibility": "off" } ] },{ "featureType": "administrative.neighborhood", "stylers": [ { "visibility": "off" } ] },{ "featureType": "administrative.land_parcel", "stylers": [ { "visibility": "off" } ] },{ "featureType": "poi", "stylers": [ { "visibility": "off" } ] },{ "featureType": "road.highway", "elementType": "labels", "stylers": [ { "visibility": "off" } ] },{ "featureType": "road.arterial", "elementType": "labels", "stylers": [ { "visibility": "off" } ] },{ "featureType": "road.local", "elementType": "labels.icon", "stylers": [ { "visibility": "off" } ] },{ "featureType": "landscape.natural.landcover", "stylers": [ { "saturation": -20 }, { "gamma": 0.54 }, { "lightness": 42 }, { "hue": "#ff7700" } ] },{ "featureType": "water", "stylers": [ { "hue": "#ffb300" }, { "lightness": -30 }, { "saturation": -100 }, { "gamma": 0.7 } ] },{ },{ },{ "featureType": "landscape.man_made", "stylers": [ { "hue": "#ff0000" }, { "lightness": 2 }, { "saturation": 16 } ] },{ "featureType": "road", "stylers": [ { "saturation": -75 }, { "hue": "#007fff" }, { "gamma": 0.93 } ] },{ "featureType": "road.local", "stylers": [ { "hue": "#005eff" }, { "gamma": 0.88 }, { "saturation": 18 }, { "lightness": -3 }, { "weight": 0.1 } ] },{ "featureType": "road.arterial", "stylers": [ { "gamma": 1 }, { "hue": "#005eff" }, { "saturation": 13 }, { "lightness": -17 }, { "weight": 0.8 } ] },{ "featureType": "road", "elementType": "labels.text", "stylers": [ { "saturation": -69 }, { "lightness": 50 } ] },{ "featureType": "transit", "stylers": [ { "visibility": "off" } ] },{ "featureType": "administrative.locality", "elementType": "labels.text.fill", "stylers": [ { "hue": "#ff7700" }, { "lightness": 14 }, { "saturation": 56 } ] },{ "featureType": "administrative" },{ "featureType": "administrative.country", "elementType": "labels.text", "stylers": [ { "hue": "#ff0000" }, { "saturation": 49 }, { "lightness": 20 }, { "weight": 1.8 } ] },{ "featureType": "water", "elementType": "labels.text", "stylers": [ { "hue": "#0000ff" }, { "weight": 0.1 }, { "lightness": 17 }, { "saturation": 25 } ] },{ } ];
 
 	var mapOptions = {
 		center: new google.maps.LatLng(1, 1),
