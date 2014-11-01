@@ -40,6 +40,7 @@ app.openBook = function(data) {
         center: new google.maps.LatLng(data.events[0].location.lat, data.events[0].location.lon)
     });
 
+    // Create map pins
     var createObjects = function(map, characters, events) {
         _.each(characters, function(character) {
         	var charEvents = _.filter(events, function(event) {
@@ -131,11 +132,92 @@ app.openBook = function(data) {
 
         createObjects(map, filterCharacters, events);
     });
+    
+    
+    
+    // Set book name
+    app.setBookName(data['name']);
+    
+    // Load author details
+    if(data['data'] !== null && data['data']['author']) {
+        
+        // set author details
+        app.setAuthorDetails(data['data']['author']);
+    }
+    
+    // Load Wikipedia excerpt information
+    if(data['data'] !== null && data['data']['description'] !== null && data['data']['description']['title'] !== null) {
+        
+        // get wikipedia data and set the book description
+        appData.getWikipediaExcerpt(data['data']['description']['title'], app.setBookDescription);
+    }
 };
 
 app.clearUI = function() {
-	$('#character-container, #timeline-container, #map').empty();
+    
+    // 
+    $('#character-container, #timeline-container, #map').empty();
+    
+    // 
+    $('#sidebar #book-title').text("");
+    
+    //
+    $('#sidebar #author-picture').attr('src', "");
+    
+    // 
+    $('#sidebar #author').html("");
+    
+    //
+    $('#panel-facts #description').html("There is no data, sorry!");
 };
+
+/**
+ * 
+ * @returns {undefined}
+ */
+app.setBookName = function(name) {
+    
+    $('#sidebar #book-title').text(name);
+};
+
+/**
+ * 
+ * @param {type} details
+ * @returns {undefined}
+ */
+app.setAuthorDetails = function(details) {
+    
+    // set 
+    $('#sidebar #author-picture').attr('src', details['picture']);
+    
+    
+    var detailsHtml = "";
+    
+    // Add name and born data
+    detailsHtml += details['name'] + "<br />Born in " + details['born'];
+    
+    // 
+    if(details["died"] !== null) {
+        
+        detailsHtml += "<br />Died in " + details['death'];
+    }
+    
+    // Set details
+    $('#sidebar #author').html(detailsHtml);
+};
+
+/**
+ * 
+ * @param {type} description
+ * @returns {undefined}
+ */
+app.setBookDescription = function(description) {
+
+    // set description text
+    $('#panel-facts #description').html(description);
+};
+
+
 
 var helper = {};
 
