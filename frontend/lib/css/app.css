@@ -1,0 +1,56 @@
+@import url('normalize.css');
+@import url('fonts.css');
+@import url('foundation.css');
+@import url('slider-customization.css');
+@import url('jQRangeSlider/classic.css');
+
+/* 
+	red: #FA6666
+	green: #98E466
+	yellow: #FBEF69
+	blue: #4BBCF6
+*/
+
+body, h1, h2, h3, h4, h5, a, p, span, i {
+  font-family: "FreightSansBook", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; 
+}
+
+#main, img {
+	max-width: none;
+}
+
+#map {
+	background: #fff;
+        height: 100vh;
+}
+#sidebar {
+	background: #eee;
+	height: 100vh;
+}
+
+#search {
+    position: absolute; 
+    top:28px;
+}
+
+#search-input {
+    width: 100%; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: #FFF; 
+    border: 0; 
+    height: 35px;
+}
+
+#pageline {
+    position: absolute;
+    bottom: 100px;
+    height: 40px;
+}
+
+#timeline {
+    position: absolute;
+    bottom: 40px;
+    height: 40px;
+}
+
+.overlay { z-index: 2; }
