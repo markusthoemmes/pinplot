@@ -1,5 +1,18 @@
 {
   "name" : "Tagebuch Italienreise",
+  "data" : {
+      "description" : {
+            "source" : "wikipedia",
+            "url": "http://de.wikipedia.org/wiki/Italienische_Reise",
+            "title": "Italienische_Reise"
+      }
+  },
+  "author" : {
+      "ref" : {
+          "source" : "ddb",
+          "entity" : "118540238"
+      }
+  },
   "events" : [
       {
       "involved" : [{

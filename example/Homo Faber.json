@@ -1,5 +1,18 @@
 {
   "name" : "Homo faber Test",
+  "data" : {
+      "description" : {
+            "source" : "wikipedia",
+            "url": "http://de.wikipedia.org/wiki/Homo_faber_(Roman)",
+            "title": "Homo_faber_(Roman)"
+      }
+  },
+  "author" : {
+        "ref" : {
+            "source" : "ddb",            
+            "entity" : "118536109"
+        }
+  },
   "events" : [{
       "involved" : [{
         "name" : "Walter Faber"
