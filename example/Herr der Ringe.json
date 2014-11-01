@@ -1,0 +1,252 @@
+{
+  "name" : "Der Herr der Ringe",
+  "map" : "",
+  "data" : {
+    "author" : {
+        "name" : "John Ronald Reuel Tolkien",
+        "born" : "3. Januar 1892",
+        "death" : "2. September 1973",
+        "picture" : "http://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Oxford_Tolkien.JPG/220px-Oxford_Tolkien.JPG",
+        "url" : "http://en.wikipedia.org/wiki/J._R._R._Tolkien"
+    },
+      "description" : {
+            "source" : "wikipedia",
+            "url": "http://en.wikipedia.org/wiki/The_Lord_of_the_Rings",
+            "title": "The_Lord_of_the_Rings"
+      }
+  },
+  
+  "events" : [
+      {
+      "involved" : [
+          {"name" : "Gandalf"},
+          {"name" : "Frodo"},
+          {"name" : "Sam"}
+        ],
+      "characterCount" : 1,
+      "timestamp": 33080400000,
+      "location" : {
+        "lat" : 51.261914,
+        "lon" : -91.658935
+      }
+      },
+      {
+      "involved" : [
+          {"name" : "Gollum"}
+        ],
+      "characterCount" : 2,
+      "timestamp": 33086361600,
+      "location" : {
+        "lat" : 35.101934,
+        "lon" : -64.193115
+       }
+      },
+      {
+      "involved" : [
+          {"name" : "Gandalf"}
+        ],
+      "characterCount" : 3,
+      "timestamp": 33088089600,
+      "location" : {
+        "lat" : 41.902277,
+        "lon" : -79.002685
+      }
+    },
+      {
+      "involved" : [
+          {"name" : "Gollum"}
+        ],
+      "characterCount" : 4,
+      "timestamp": 33091200000,
+      "location" : {
+        "lat" : 47.428087,
+        "lon" : -76.98120
+      }
+    },
+      {
+      "involved" : [
+          {"name" : "Gandalf"}
+        ],
+      "characterCount" : 5,
+      "timestamp": 33095174400,
+      "location" : {
+        "lat" : 38.238180,
+        "lon" : -75.003662
+      }
+    },
+      {
+      "involved" : [
+          {"name" : "Frodo"},
+          {"name" : "Sam"},
+          {"name" : "Merry"},
+          {"name" : "Pippin"}
+        ],
+      "characterCount" : 6,
+      "timestamp": 33094742400,
+      "location" : {
+        "lat" : 51.590722,
+        "lon" : -89.24194
+      }
+    },
+      {
+      "involved" : [
+          {"name" : "Gandalf"}
+        ],
+      "characterCount" : 7,
+      "timestamp": 33094915200,
+      "location" : {
+        "lat" : 46.860191,
+        "lon" : -84.276123
+      }
+    },
+      {
+      "involved" : [
+          {"name" : "Gandalf"}
+        ],
+      "characterCount" : 8,
+      "timestamp": 33095001600,
+      "location" : {
+        "lat" : 49.1242919,
+        "lon" : -88.6267089
+      }
+    },
+    {
+      "involved" : [
+          {"name" : "Gandalf"}
+        ],
+      "characterCount" : 9,
+      "timestamp": 33095088000,
+      "location" : {
+        "lat" : 50.764259,
+        "lon" : -90.076904
+      }
+    },
+      {
+      "involved" : [
+          {"name" : "Frodo"},
+          {"name" : "Sam"},
+          {"name" : "Merry"},
+          {"name" : "Pippin"},
+          {"name" : "Aragorn"}
+        ],
+      "characterCount" : 10,
+      "timestamp": 33095174400,
+      "location" : {
+        "lat" : 51.096622,
+        "lon" : -86.912841
+      }
+    },
+      {
+      "involved" : [
+          {"name" : "Gandalf"}
+        ],
+      "characterCount" : 11,
+      "timestamp": 33095260800,
+      "location" : {
+        "lat" : 51.096622,
+        "lon" : -86.912841
+      }
+    },
+      {
+      "involved" : [
+          {"name" : "Frodo"},
+          {"name" : "Sam"},
+          {"name" : "Merry"},
+          {"name" : "Pippin"},
+          {"name" : "Aragorn"}
+        ],
+      "characterCount" : 12,
+      "timestamp": 33095433600,
+      "location" : {
+        "lat" : 52.025458,
+        "lon" : -84.671630
+      }
+    },
+      {
+      "involved" : [
+          {"name" : "Gandalf"}
+        ],
+      "characterCount" : 13,
+      "timestamp": 33095433600,
+      "location" : {
+        "lat" : 51.590722,
+        "lon" : -83.353271
+      }
+    },
+      {
+      "involved" : [
+          {"name" : "Frodo"},
+          {"name" : "Sam"},
+          {"name" : "Merry"},
+          {"name" : "Pippin"},
+          {"name" : "Aragorn"}
+        ],
+      "characterCount" : 14,
+      "timestamp": 33095692800,
+      "location" : {
+        "lat" : 51.590722,
+        "lon" : -83.353271
+      }
+    },
+      {
+      "involved" : [
+          {"name" : "Frodo"},
+          {"name" : "Sam"},
+          {"name" : "Merry"},
+          {"name" : "Pippin"},
+          {"name" : "Aragorn"}
+        ],
+      "characterCount" : 15,
+      "timestamp": 33096297600,
+      "location" : {
+        "lat" : 51.699799,
+        "lon" : -79.530029
+      }
+      },
+      {
+      "involved" : [
+          {"name" : "Gandalf"}
+        ],
+      "characterCount" : 16,
+      "timestamp": 33096729600,
+      "location" : {
+        "lat" : 51.727028,
+        "lon" : -75.750732
+      }
+    },
+      {
+      "involved" : [
+          {"name" : "Frodo"},
+          {"name" : "Sam"},
+          {"name" : "Merry"},
+          {"name" : "Pippin"},
+          {"name" : "Aragorn"}
+        ],
+      "characterCount" : 17,
+      "timestamp": 33096902400,
+      "location" : {
+        "lat" : 51.426614,
+        "lon" : -76.322021
+      }
+    },
+      {
+      "involved" : [
+          {"name" : "Frodo"},
+          {"name" : "Sam"},
+          {"name" : "Merry"},
+          {"name" : "Pippin"},
+          {"name" : "Aragorn"},
+          {"name" : "Gandalf"},
+          {"name" : "Legolas"},
+          {"name" : "Gimli"},
+          {"name" : "Boromir"}
+        ],
+      "characterCount" : 18,
+      "timestamp": 33097334400,
+      "location" : {
+        "lat" : 51.426614,
+        "lon" : -76.322021
+      }
+    }
+  ]
+}
