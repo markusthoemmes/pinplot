@@ -64,6 +64,54 @@
           "url" : "https://textgridlab.org/1.0/tgcrud-public/rest/textgrid:11cht.0/data",
           "xml:id" : "tg159.2.81"
       }
+    },
+      {
+      "involved" : [{
+        "name" : "Johann W. von Goethe"
+      }],
+      "characterCount" : 5,
+      "timestamp": -5784841260,
+      "location" : {
+        "lat" : 47.441302,
+        "lon" : 11.264030
+      },
+      "ref" : {
+          "source": "textgrid",
+          "url" : "https://textgridlab.org/1.0/tgcrud-public/rest/textgrid:11cht.0/data",
+          "xml:id" : "tg159.2.98"
+      }
+    },
+      {
+      "involved" : [{
+        "name" : "Johann W. von Goethe"
+      }],
+      "characterCount" : 6,
+      "timestamp": -5784798600,
+      "location" : {
+        "lat" : 47.390287,
+        "lon" : 11.264704
+      },
+      "ref" : {
+          "source": "textgrid",
+          "url" : "https://textgridlab.org/1.0/tgcrud-public/rest/textgrid:11cht.0/data",
+          "xml:id" : "tg159.2.103.1"
+      }
+    },
+      {
+      "involved" : [{
+        "name" : "Johann W. von Goethe"
+      }],
+      "characterCount" : 7,
+      "timestamp": -5784796800,
+      "location" : {
+        "lat" : 47.330002,
+        "lon" : 11.187774
+      },
+      "ref" : {
+          "source": "textgrid",
+          "url" : "https://textgridlab.org/1.0/tgcrud-public/rest/textgrid:11cht.0/data",
+          "xml:id" : "tg159.2.105"
+      }
     }
   ]
 }
