@@ -31,13 +31,36 @@
         $(document).ready(function () {
 
             // Run this 
-            app.run({"appData" : { "apiURL" : 'http://192.168.1.80:8080'}});
+            app.run({"appData" : { "apiURL" : 'http://192.168.1.55:8080'}});
 
         });
 
     </script>
     <div id="main" class="row">
-        <div id="sidebar" class="large-6 columns"><h1 id="title">Homo Faber</h1><br /><span id="author">Max Frisch</span></div>
+        <div id="sidebar" class="large-6 columns">
+            <div class="row">
+                <h1 class="columns large-24" id="title">Homo Faber</h1>    
+            </div>
+            <div class="row">
+                <img class="columns large-4" id="picture" src="https://www.deutsche-digitale-bibliothek.de/binary/O6KMW5SU62VCMQK2AUFKLE243DMLUR7O/mvpr/1.jpg" alt="" /> 
+                <span class="columns large-20" id="author">Max Frisch<br />Published 1981 in Zürich</span>
+            </div>
+            <div id="description-container" style="margin-top: 10px;">
+                <div class="row">
+                    <span class="columns large-24" id="description" style="">Homo faber. Ein Bericht ist ein Roman des Schweizer Schriftstellers Max Frisch. Nach seiner Veröffentlichung im Oktober 1957 entwickelte er sich zum Bestseller und gilt als eines der bekanntesten Prosawerke Max Frischs. Der Roman wurde vielfach übersetzt und sowohl in literaturwissenschaftlichen Untersuchungen als auch im Schulunterricht häufig behandelt. Eine Verfilmung Volker Schlöndorffs kam 1991 als Homo Faber in die Kinos.</span>
+                </div>
+                <div class="row">
+                    <div class="columns large-24">
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="columns large-24" id="description-toggle" style="border-bottom: #b2b2b2 solid 1px; text-align: center; cursor: pointer;">toggle</div>
+            </div>
+        </div>
         <div id="map" class="large-18 columns"></div>
     </div>
     
