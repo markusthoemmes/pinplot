@@ -5,20 +5,14 @@ var app = {};
  */
 app.run = function(settingsObj) {
     
-    appMap.createMap("map");
-
     // confuguration
     appData.apiURL = settingsObj['appData']['apiURL'];
 
     appData.getBook('54540dcce3118013501512b0', function(data) {
 
-        var mapOptions = {
-            center: new google.maps.LatLng(data.events[0].location.lat, data.events[0].location.lon),
-            zoom: 8,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        appMap.map = new google.maps.Map(document.getElementById("map"),
-            mapOptions);
+        appMap.createMap("map", {
+            center: new google.maps.LatLng(data.events[0].location.lat, data.events[0].location.lon)
+        });
 
         var createObjectsInBounds = function(map, lowerBound, upperBound) {
             var coordinates = [];
