@@ -42,8 +42,8 @@
 
 
             //            // Initialize jQuery slider
-//            $("#pageline").rangeSlider();
-//            $("#timeline").dateRangeSlider();
+            $("#pageline-container").rangeSlider();
+            $("#timeline-container").dateRangeSlider();
 
 //            // @TODO: use data 
 //            $("#pageline").rangeSlider("option", "bounds", {min: 0, max: 90});
@@ -66,8 +66,12 @@
             <input id="search-input" type="text" value="Book search" />
         </div>
     </div>
-    <div id="timelines" class="row overlay">
-        <div class="large-18 large-offset-6 columns"></div>
+    
+    <div id="pageline" class="row overlay">
+        <div id="pageline-container" class="large-16 large-offset-7 columns" style="border: red solid 1px;"></div>
+    </div>
+    <div id="timeline" class="row overlay">
+        <div id="timeline-container" class="large-16 large-offset-7 columns" style="border: blue solid 1px;"></div>
     </div>
     
 </body>
