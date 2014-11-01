@@ -1,0 +1,136 @@
+{
+  "name" : "Homo faber Test",
+  "events" : [{
+      "involved" : [{
+        "name" : "Walter Faber"
+      }],
+      "characterCount" : 1,
+      "timestamp": -403056000,
+      "location" : {
+        "lat" : 40.777047,
+        "lon" : -73.873966
+      }
+    }, {
+      "involved" : [{
+        "name" : "Walter Faber"
+      }],
+      "characterCount" : 2,
+      "timestamp": -402796800,
+      "location" : {
+        "lat" : 24.26694,
+        "lon" : -98.836275
+      }
+    }, {
+      "involved" : [{
+        "name" : "Walter Faber"
+      }],
+      "characterCount" : 3,
+      "timestamp": -402451200,
+      "location" : {
+        "lat" : 19.830125,
+        "lon" : -90.534909
+      }
+    }, {
+      "involved" : [{
+        "name" : "Walter Faber"
+      }],
+      "characterCount" : 4,
+      "timestamp": -401932800,
+      "location" : {
+        "lat" : 17.509167,
+        "lon" : -91.982222
+      }
+    }, {
+      "involved" : [{
+        "name" : "Walter Faber"
+      }],
+      "characterCount" : 5,
+      "timestamp": -401673600,
+      "location" : {
+        "lat" : 15.783471,
+        "lon" : -90.230759
+      }
+    }, {
+      "involved" : [{
+        "name" : "Walter Faber"
+      }],
+      "characterCount" : 6,
+      "timestamp": -400809600,
+      "location" : {
+        "lat" : 17.509167,
+        "lon" : -91.982222
+      }
+    }, {
+      "involved" : [{
+        "name" : "Walter Faber"
+      }],
+      "characterCount" : 7,
+      "timestamp": -400723200,
+      "location" : {
+        "lat" : 40.712784,
+        "lon" : -74.005941
+      }
+    }, {
+      "involved" : [{
+        "name" : "Walter Faber"
+      }],
+      "characterCount" : 8,
+      "timestamp": -399945600,
+      "location" : {
+        "lat" : 49.49437,
+        "lon" : 0.107929
+      }
+    }, {
+      "involved" : [{"name" : "Walter Faber"},
+      {"name": "Sabeth"}],
+      "characterCount" : 9,
+      "location" : {
+        "lat" : 48.856614,
+        "lon" : 2.352222
+      }
+    }, {
+      "involved" : [{
+        "name" : "Walter Faber"
+      },
+      {"name": "Sabeth"}],
+      "characterCount" : 10,
+      "timestamp": -399859200,
+      "location" : {
+        "lat" : 43.949317,
+        "lon" : 4.805528
+      }
+    }, {
+      "involved" : [{
+        "name" : "Walter Faber"
+      },
+      {"name": "Sabeth"}],
+      "characterCount" : 11,
+      "timestamp": -398822400,
+      "location" : {
+        "lat" : 38.24664,
+        "lon" : 21.734574
+      }
+    }, {
+      "involved" : [{
+        "name" : "Walter Faber"
+      },
+      {"name": "Sabeth"}],
+      "characterCount" : 12,
+      "timestamp": -397612800,
+      "location" : {
+        "lat" : 37.938637,
+        "lon" : 22.932238
+      }
+    }, {
+      "involved" : [{
+        "name" : "Walter Faber"
+      },
+      {"name": "Sabeth"}],
+      "characterCount" : 13,
+      "timestamp": -397612800,
+      "location" : {
+        "lat" : 37.983917,
+        "lon" : 23.72936
+      }
+    }]
+}

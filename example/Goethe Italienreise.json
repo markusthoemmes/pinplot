@@ -1,0 +1,69 @@
+{
+  "name" : "Tagebuch Italienreise",
+  "events" : [
+      {
+      "involved" : [{
+        "name" : "Johann W. von Goethe"
+      }],
+      "characterCount" : 1,
+      "timestamp": -5785246800,
+      "location" : {
+        "lat" : 50.230555555556,
+        "lon" : 12.8725
+      },
+      "ref" : {
+          "source": "textgrid",
+          "url" : "https://textgridlab.org/1.0/tgcrud-public/rest/textgrid:11cht.0/data",
+          "xml:id" : "tg159.2.53"
+      }
+    },
+      {
+      "involved" : [{
+        "name" : "Johann W. von Goethe"
+      }],
+      "characterCount" : 2,
+      "timestamp": -5785214400,
+      "location" : {
+        "lat" : 50.079444444444,
+        "lon" : 12.370555555556
+      },
+      "ref" : {
+          "source": "textgrid",
+          "url" : "https://textgridlab.org/1.0/tgcrud-public/rest/textgrid:11cht.0/data",
+          "xml:id" : "tg159.2.55"
+      }
+    },
+      {
+      "involved" : [{
+        "name" : "Johann W. von Goethe"
+      }],
+      "characterCount" : 3,
+      "timestamp": -5785041600,
+      "location" : {
+        "lat" : 49.013430,
+        "lon" : 12.101624
+      },
+      "ref" : {
+          "source": "textgrid",
+          "url" : "https://textgridlab.org/1.0/tgcrud-public/rest/textgrid:11cht.0/data",
+          "xml:id" : "tg159.2.69"
+      }
+    },
+      {
+      "involved" : [{
+        "name" : "Johann W. von Goethe"
+      }],
+      "characterCount" : 4,
+      "timestamp": -5784976800,
+      "location" : {
+        "lat" : 48.135125,
+        "lon" : 11.581981
+      },
+      "ref" : {
+          "source": "textgrid",
+          "url" : "https://textgridlab.org/1.0/tgcrud-public/rest/textgrid:11cht.0/data",
+          "xml:id" : "tg159.2.81"
+      }
+    }
+  ]
+}
