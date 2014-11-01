@@ -24,75 +24,20 @@
 <body>
     <script type="text/javascript" src="js/data.js"></script>
     <script type="text/javascript" src="js/map.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript">
 
         //
         $(document).ready(function () {
 
-                    appMap.createMap("map");
+            // Run this 
+            app.run({"appData" : { "apiURL" : 'http://192.168.1.80:8080'}});
 
-                    // @CONFIGURATION
-                    appData.apiURL = 'http://192.168.1.80:8080';
-
-                    appData.getBook('54540dcce3118013501512b0', function(data) {
-
-                        var mapOptions = {
-                            center: new google.maps.LatLng(data.events[0].location.lat, data.events[0].location.lon),
-                            zoom: 8,
-                            mapTypeId: google.maps.MapTypeId.ROADMAP
-                        };
-                        appMap.map = new google.maps.Map(document.getElementById("map"),
-                            mapOptions);
-
-                        var createObjectsInBounds = function(map, lowerBound, upperBound) {
-                            var coordinates = [];
-                            for(var i = 0; i < data.events.length; i++) {
-                        var currentEvent = data.events[i];
-                        if (currentEvent.characterCount >= lowerBound && currentEvent.characterCount <= upperBound) {
-
-                            appMap.addObject(new google.maps.Marker({
-                                position: new google.maps.LatLng(currentEvent.location.lat, currentEvent.location.lon)
-                            }));
-
-                            coordinates.push(new google.maps.LatLng(currentEvent.location.lat, currentEvent.location.lon));
-                        }
-                    }
-
-                    appMap.addObject(new google.maps.Polyline({
-                        path: coordinates,
-                        strokeColor: "#FF0000",
-                        strokeOpacity: 1.0,
-                        strokeWeight: 2
-                    }));
-                };
-                createObjectsInBounds(map, data.events[0].characterCount, data.events[data.events.length - 1].characterCount);
-
-
-                $("#pageline-slider").rangeSlider({
-                    step: 1,
-                    bounds: {min: data.events[0].characterCount, max: data.events[data.events.length - 1].characterCount},
-                    defaultValues: {min: data.events[0].characterCount, max: data.events[data.events.length - 1].characterCount}
-                });
-                $('#pageline-slider').bind('valuesChanging', function (e, data) {
-                    appMap.clearMap();
-                    createObjectsInBounds(map, data.values.min, data.values.max);
-                });
-            });
-
-
-            // Initialize jQuery slider
-//            $("#timeline-sider").dateRangeSlider();
-//
-//            // @TODO: use data 
-//            $("#timeline-slider").dateRangeSlider("option", "bounds", {
-//                min: new Date(2012, 0, 1),
-//                max: new Date(2012, 11, 31)
-//            });
         });
 
     </script>
     <div id="main" class="row">
-        <div id="sidebar" class="large-6 columns"><h1>Sidebar</h1></div>
+        <div id="sidebar" class="large-6 columns"><h1 id="title">Homo Faber</h1><br /><span id="author">Max Frisch</span></div>
         <div id="map" class="large-18 columns"></div>
     </div>
     
