@@ -1,17 +1,17 @@
 {
   "name" : "Homo faber Test",
   "data" : {
+      "author" : {
+            "ref" : {
+                "source" : "ddb",            
+                "entity" : "118536109"
+            }
+      },
       "description" : {
             "source" : "wikipedia",
-            "url": "http://de.wikipedia.org/wiki/Homo_faber_(Roman)",
-            "title": "Homo_faber_(Roman)"
+            "url": "http://en.wikipedia.org/wiki/Homo_Faber_(novel)",
+            "title": "Homo_Faber_(novel)"
       }
-  },
-  "author" : {
-        "ref" : {
-            "source" : "ddb",            
-            "entity" : "118536109"
-        }
   },
   "events" : [{
       "involved" : [{

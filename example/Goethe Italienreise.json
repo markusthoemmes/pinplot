@@ -1,18 +1,19 @@
 {
   "name" : "Tagebuch Italienreise",
   "data" : {
+    "author" : {
+        "ref" : {
+            "source" : "ddb",
+            "entity" : "118540238"
+        }
+    },
       "description" : {
             "source" : "wikipedia",
-            "url": "http://de.wikipedia.org/wiki/Italienische_Reise",
-            "title": "Italienische_Reise"
+            "url": "http://en.wikipedia.org/wiki/Italian_Journey",
+            "title": "Italian_Journey"
       }
   },
-  "author" : {
-      "ref" : {
-          "source" : "ddb",
-          "entity" : "118540238"
-      }
-  },
+  
   "events" : [
       {
       "involved" : [{
