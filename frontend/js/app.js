@@ -76,8 +76,37 @@ app.openBook = function(data) {
         timeline.setItems(timelineData);
     };
 
-    var timeline = new vis.Timeline(document.getElementById('timeline-container'));
+    timelineData = new vis.DataSet({});
+    var timeline = new vis.Timeline(document.getElementById('timeline-wrapper'));
+    timeline.setOptions({
+    	height: '40px',
+    	showMinorLabels: false,
+    	showMajorLabels:false,
+    	stack: true,
+    	orientation: 'top',
+    	margin: {
+	        axis: 23,
+	        item: {
+	        	vertical:-35,
+	        	horizontal:3
+	        }
+	    }
+    });
     createObjects(map, filterCharacters, data.events);
+
+
+    $('#pageline-begin').text('page '+data.events[0].characterCount);
+    $('#pageline-end').text('page '+data.events[data.events.length-1].characterCount);
+
+    var byTimestamp = _.sortBy(data.events, function(event) {
+    	return event.timestamp;
+    });
+    var timelineBegin = new Date(byTimestamp[0].timestamp*1000);
+    var timelineEnd = new Date(byTimestamp[byTimestamp.length-1].timestamp*1000);
+
+    var monthNames = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+    $('#timeline-begin').text(monthNames[timelineBegin.getMonth()]+" "+timelineBegin.getFullYear());
+    $('#timeline-end').text(monthNames[timelineEnd.getMonth()]+" "+timelineEnd.getFullYear());
 
     timeline.on('select', function(item) {
     	if(item.items.length > 0) {
@@ -99,21 +128,6 @@ app.openBook = function(data) {
         var events = helper.filterEvents(data.events, filterCharacters, 'characterCount', sliderData.values.min, sliderData.values.max);
         createObjects(map, filterCharacters, events);
     });
-
-    /*var timelineSlider = $('#timeline-slider').dateRangeSlider({
-    	step: {days: 1},
-    	bounds: {min: new Date((data.events[0].timestamp-86400)*1000), max: new Date((data.events[data.events.length - 1].timestamp+86400)*1000)},
-    	defaultValues: {min: new Date((data.events[0].timestamp-86400)*1000), max: new Date((data.events[data.events.length - 1].timestamp+86400)*1000)}
-    });
-
-    timelineSlider.bind('valuesChanging', function(e, sliderData) {
-    	appMap.clearMap();
-    	var events = helper.filterEvents(data.events, filterCharacters, 'timestamp', sliderData.values.min, sliderData.values.max);
-    	createObjects(map, filterCharacters, events);
-
-    	pagelineSlider.rangeSlider('min', events[0].characterCount);
-    	pagelineSlider.rangeSlider('max', events[events.length-1].characterCount);
-    });*/
 
     $characters.on('change', 'input', function() {
     	filterCharacters = [];
@@ -156,7 +170,7 @@ app.openBook = function(data) {
 app.clearUI = function() {
     
     // 
-    $('#character-container, #timeline-container, #map').empty();
+    $('#character-container, #timeline-wrapper, #map').empty();
     
     // 
     $('#sidebar #book-title').text("");

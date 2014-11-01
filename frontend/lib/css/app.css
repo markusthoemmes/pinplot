@@ -105,7 +105,28 @@ body, h1, h2, h3, h4, h5, a, p, span, i {
 
 #pageline {
     position: absolute;
-    bottom: 200px;
+    bottom: 70px;
+}
+
+#pageline-container {
+    padding:0 120px;
+    background:rgba(0,0,0, 0.3);
+    position:relative;
+}
+
+#pageline-begin, #pageline-end {
+    position:absolute;
+    top:0;
+    color:#fff;
+    font-size:14px;
+}
+
+#pageline-begin {
+    left:45px;
+}
+
+#pageline-end {
+    right:45px;
 }
 
 #timeline {
@@ -113,8 +134,66 @@ body, h1, h2, h3, h4, h5, a, p, span, i {
     bottom: 30px;
 }
 
-.vis.timeline {
-    background:#fff;
+#timeline .item.box {
+    transform:rotate(45deg);
+    border-radius:0;
+    background:#98E466;
+    border:1px solid rgba(255,255,255,0.7);
+}
+
+#timeline .item.dot {
+    display:none;
+}
+
+#timeline .vispanel.background.vertical {
+    display:none;
+}
+
+#timeline .vis.timeline {
+    border:0;
+}
+
+#timeline .vispanel.center {
+    border:0;
+    z-index:1000;
+}
+
+#timeline .vispanel.center .content {
+    top:0px !important;
+}
+
+#timeline .vispanel.center .background {
+    display:none;
+}
+
+#timeline .vispanel.bottom, #timeline .vispanel.top {
+    border:0;
+}
+
+#timeline .text {
+    color:#fff;
+}
+
+#timeline-container {
+    padding:0 80px;
+    background:rgba(0,0,0,0.5);
+    position:relative;
+}
+
+#timeline-begin, #timeline-end {
+    position:absolute;
+    top:18px;
+    height:40px;
+    color:#fff;
+    font-size:14px;
+}
+
+#timeline-begin {
+    left:10px;
+}
+
+#timeline-end {
+    right:10px;
 }
 
 .overlay { z-index: 2; }
