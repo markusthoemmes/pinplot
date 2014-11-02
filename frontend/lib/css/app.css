@@ -27,6 +27,33 @@ body, h1, h2, h3, h4, h5, a, p, span, i {
 	height: 100vh;
 }
 
+#author-picture {
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+	border-color: #EEE;
+	border-style: solid;
+	border-width: 1px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	background-color: #4ABDF5;
+	background-repeat: no-repeat;
+	background-size: cover;
+	-webkit-filter: sepia(100%) hue-rotate(180deg);
+	-moz-filter: 	sepia(100%) hue-rotate(180deg);
+	-ms-filter: 	sepia(100%) hue-rotate(180deg);
+	-o-filter: 		sepia(100%) hue-rotate(180deg);
+	filter: 		sepia(100%) hue-rotate(180deg);	
+}
+
+#author {
+	padding-left: 10px;
+	color: #999;
+    display: table-cell;
+    vertical-align: bottom;
+
+}
+
 #description-container .fact-key {
     text-transform: uppercase;
 }
