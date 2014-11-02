@@ -1,0 +1,10 @@
+/* Defining the background positions and source files for the markers sprite graphic */
+
+#sad, #dead, #happy, #neutral { width: 40px; height: 67px; background: url('img/markers.png'); }
+
+#sad, #dead, #happy, #neutral { background-image: url('img/markers.svg'); }
+
+#sad { background-position: 0px -204px; }
+#dead { background-position: 0px -136px; }
+#happy { background-position: 0px -68px; }
+#neutral { background-position: 0px 0px; }
