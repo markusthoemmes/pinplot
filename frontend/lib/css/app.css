@@ -31,18 +31,22 @@ body, h1, h2, h3, h4, h5, a, p, span, i {
     text-transform: uppercase;
 }
 
-
 #search {
     position: absolute; 
     top:28px;
 }
 
-#search-input {
-    width: 500px; 
+.search-input {
+	min-width: 500px;
+    width: 100%; 
     background-color: rgba(0, 0, 0, 0.5); 
     color: #FFF; 
     border: 0; 
     height: 35px;
+}
+
+.search-input-landing {
+	background-color: #FFF;
 }
 
 .tt-query {
@@ -199,3 +203,25 @@ body, h1, h2, h3, h4, h5, a, p, span, i {
 .overlay { z-index: 2; }
 
 .tab-container {max-height: 80vh;}
+
+#copyright {
+	color: #bbb;
+	position: absolute; 
+	bottom: 40px; 
+	left: 50%; 
+	width: 400px; 
+	margin-left: -200px;
+	text-align: center;
+}
+
+#logo {
+	cursor: pointer;
+	margin-right: 20px;
+}
+
+
+/* Utility Classes */
+
+.dispinline {
+	display: inline-block !important;
+}

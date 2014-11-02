@@ -47,10 +47,9 @@
             $(document).foundation();
 
             // Run this 
-            app.run({"appData" : { "apiURL" : 'http://192.168.1.57:8080'}});
+            app.run({"appData" : { "apiURL" : 'http://192.168.1.66:8080'}});
 
             // 
-            var api = new DDBRest('U936Dtv3hvJaEQWcslJZPwsQ45sUCEIpJKIq1yEtowxHI1ZHtjE1414861062729');
 
 
             // @TEST: ddb API
@@ -154,7 +153,7 @@
     
     <div id="search" class="row overlay">
         <div class="large-14 large-offset-8 columns">
-            <input id="search-input" type="text" value="Book search" />
+            <input id="search-input" class="search-input" type="text" placeholder="Search Authors, Books, Characters" />
         </div>
     </div>
     
