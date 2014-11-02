@@ -2,7 +2,7 @@
 
 <html class="no-js" lang="en">
     <head>
-        <title>StoryMapper</title>
+        <title>Pinplot</title>
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
 
         <meta name="author" content="Achim, George, Johannes, Markus" />
@@ -46,25 +46,9 @@
             
             // Initialize FOundation Framework
             $(document).foundation();
-
+            
             // Run this 
             app.run({"appData" : { "apiURL" : 'http://192.168.1.66:8080'}});
-
-            // 
-
-
-            // @TEST: ddb API
-
-            //
-//            api.items('O6KMW5SU62VCMQK2AUFKLE243DMLUR7O').aip().then(function(res) {
-//                
-//                console.debug(res);
-//                
-//            });
-            
-            
-            
-
         });
 
     </script>
@@ -81,22 +65,11 @@
             
             <dl class="accordion" data-accordion style="margin-top: 10px; max-height: 80vh;"> 
                 <dd class="accordion-navigation"> 
-                    <a href="#panel-facts">Facts</a> 
-                    <div id="panel-facts" class="content active" style="overflow: auto;"> 
+                    <a href="#panel-about">About</a> 
+                    <div id="panel-about" class="content active" style="overflow: auto;"> 
                         
                         <div class="row">
                             <span class="columns large-24" id="description">There is no data, sorry!</span>
-                        </div>
-                        <div id="description-facts" style="margin: 10px 0 10px 0; display: none;">
-                            <div class="row">
-                                <span class="fact-key columns large-8">Type</span><span class="fact-value columns large-16">Monografie</span>
-                            </div>
-                            <div class="row">
-                                <span class="fact-key columns large-8">Language</span><span class="fact-value columns large-16">German</span>
-                            </div>
-                            <div class="row">
-                                <span class="fact-key columns large-8">Series</span><span class="fact-value columns large-16">Series from ALU Freiburg</span>
-                            </div>
                         </div>
                     </div> 
                 </dd> 
@@ -105,8 +78,8 @@
                     <div id="panel-characters" class="content">There is no data, sorry!</div> 
                 </dd> 
                 <dd class="accordion-navigation"> 
-                    <a href="#panel-content">Content</a> 
-                    <div id="panel-content" class="content" style="overflow: auto;">There is no data, sorry!</div> 
+                    <a href="#panel-details">Details</a> 
+                    <div id="panel-details" class="content" style="overflow: auto;">There is no data, sorry!</div> 
                 </dd>
             </dl>
             

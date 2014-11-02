@@ -198,6 +198,13 @@ app.openBook = function(data) {
         // get wikipedia data and set the book description
         appData.getWikipediaExcerpt(data['data']['description']['title'], app.setBookDescription);
     }
+    
+    // 
+    if(data['data'] !== null && data['data']['description'] !== null && data['data']['description']['url'] !== null) {
+
+        // 
+        app.setWikipediaLink(data['data']['description']['url']);
+    }
 };
 
 app.clearUI = function() {
@@ -215,7 +222,7 @@ app.clearUI = function() {
     $('#sidebar #author').html("");
     
     //
-    $('#panel-facts #description').html("There is no data, sorry!");
+    $('#panel-about #description').html("There is no data, sorry!");
 };
 
 /**
@@ -241,12 +248,12 @@ app.setAuthorDetails = function(details) {
     var detailsHtml = "";
     
     // Add name and born data
-    detailsHtml += details['name'] + "<br />Born in " + details['born'];
+    detailsHtml += details['name'] + "<br />* " + details['born'];
     
     // 
     if(details["died"] !== null) {
         
-        detailsHtml += "<br />Died in " + details['death'];
+        detailsHtml += " / † " + details['death'];
     }
     
     // Set details
@@ -261,8 +268,22 @@ app.setAuthorDetails = function(details) {
 app.setBookDescription = function(description) {
 
     // set description text
-    $('#panel-facts #description').html(description);
+    $('#panel-about #description').html(description + "<br />");
 };
+
+/**
+ * 
+ * @returns {undefined}
+ */
+app.setWikipediaLink = function(url) {
+    
+    // Append wikipedia link if exists
+    if(url !== null) {
+        
+        $('#panel-about #description').append('<a href="'+ url +'" target"_blank">' + url + '</a>');
+    }
+};
+
 
 
 
