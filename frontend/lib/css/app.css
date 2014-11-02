@@ -97,6 +97,7 @@ body, h1, h2, h3, h4, h5, a, p, span, i {
     -webkit-user-select:none;
     -moz-user-select:none;
     user-select:none;
+    color:#fff;
 }
 
 #characters label.checked {
@@ -136,6 +137,13 @@ body, h1, h2, h3, h4, h5, a, p, span, i {
 #timeline {
     position: absolute;
     bottom: 30px;
+}
+
+#timeline .eventBox {
+    position:absolute;
+    width:10px; height:10px;
+    transform:rotate(45deg);
+    border:1px solid rgba(255,255,255,0.7);
 }
 
 #timeline .item.box {
@@ -182,6 +190,13 @@ body, h1, h2, h3, h4, h5, a, p, span, i {
     padding:0 80px;
     background:rgba(0,0,0,0.5);
     position:relative;
+    height:40px;
+}
+
+#timeline-wrapper {
+    position:absolute;
+    bottom:0;
+    width:900px;
 }
 
 #timeline-begin, #timeline-end {

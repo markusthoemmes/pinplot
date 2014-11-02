@@ -15,6 +15,32 @@ appMap.createMap = function(id, options) {
 	appMap.map.setOptions({styles: styles});
 };
 
+appMap.createHDRMap = function(id, options) {
+	var meType = {
+		getTileUrl: function(coord, zoom) {
+			if(coord.y < 0 || coord.x < 0) return null;
+			return 'http://images1.fanpop.com/images/photos/2300000/Map-of-Middle-Earth-lord-of-the-rings-2329809-1600-1200.jpg';
+		},
+		tileSize: new google.maps.Size(1600, 1200),
+		maxZoom: 5,
+		minZoom: 5,
+		radius: 1738000,
+		name: 'Middle Earth'
+	};
+
+	var meMapType = new google.maps.ImageMapType(meType);
+
+	var mapOptions = {
+		center: new google.maps.LatLng(1, 1),
+		zoom: 8,
+    	mapTypeId: google.maps.MapTypeId.ROADMAP,
+	};
+	appMap.map = new google.maps.Map(document.getElementById(id), $.extend({}, mapOptions, options));
+
+	appMap.map.mapTypes.set('middle-earth', meMapType);
+  	appMap.map.setMapTypeId('middle-earth');
+};
+
 appMap.addObject = function(marker) {
 	marker.setMap(appMap.map);
 	appMap.objects.push(marker);
