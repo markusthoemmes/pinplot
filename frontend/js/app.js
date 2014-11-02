@@ -1,8 +1,5 @@
 var app = {};
 
-/**
- * 
- */
 app.run = function(settingsObj) {
 	appData.apiURL = settingsObj.appData.apiURL;
 	appData.getBooks(function(books) {
@@ -107,51 +104,19 @@ app.openBook = function(data) {
 	            geodesic: true
 	        }));
         });
-
-      	/*timelineData = new vis.DataSet({});
-        for(var i = 0; i < events.length; i++) {
-        	timelineData.add([{id:i, start: new Date(events[i].timestamp*1000), model: events[i]}]);
-        }
-        timeline.setItems(timelineData);*/
     };
 
-    /*timelineData = new vis.DataSet({});
-    var timeline = new vis.Timeline(document.getElementById('timeline-wrapper'));
-    timeline.setOptions({
-    	height: '40px',
-    	showMinorLabels: false,
-    	showMajorLabels:false,
-    	stack: true,
-    	orientation: 'top',
-    	margin: {
-	        axis: 23,
-	        item: {
-	        	vertical:-35,
-	        	horizontal:3
-	        }
-	    }
-    });*/
-
     createObjects(map, filterCharacters, data.events);
-
-
-    $('#pageline-begin').text('page '+data.events[0].characterCount);
-    $('#pageline-end').text('page '+data.events[data.events.length-1].characterCount);
 
     var timelineBegin = new Date(byTimestamp[0].timestamp*1000);
     var timelineEnd = new Date(byTimestamp[byTimestamp.length-1].timestamp*1000);
 
-    var monthNames = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+    var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     $('#timeline-begin').text(monthNames[timelineBegin.getMonth()]+" "+timelineBegin.getFullYear());
     $('#timeline-end').text(monthNames[timelineEnd.getMonth()]+" "+timelineEnd.getFullYear());
 
-    /*timeline.on('select', function(item) {
-    	if(item.items.length > 0) {
-    		var event = timelineData.get(item.items[0]).model;
-    		appMap.map.setCenter(new google.maps.LatLng(event.location.lat, event.location.lon));
-    	}
-    });*/
-
+    $('#pageline-begin').text('page '+data.events[0].characterCount);
+    $('#pageline-end').text('page '+data.events[data.events.length-1].characterCount);
 
     var pagelineSlider = $("#pageline-slider").rangeSlider({
         step: 1,
@@ -212,78 +177,37 @@ app.openBook = function(data) {
 };
 
 app.clearUI = function() {
-    
-    // 
     $('#character-container, #timeline-wrapper, #map').empty();
-    
-    // 
     $('#sidebar #book-title').text("");
-    
-    //
     $('#sidebar #author-picture').attr('src', "");
-    
-    // 
     $('#sidebar #author').html("");
-    
-    //
     $('#panel-about #description').html("There is no data, sorry!");
 };
 
-/**
- * 
- * @returns {undefined}
- */
+
 app.setBookName = function(name) {
-    
     $('#sidebar #book-title').text(name);
 };
 
-/**
- * 
- * @param {type} details
- * @returns {undefined}
- */
 app.setAuthorDetails = function(details) {
-    
-    // set 
+
     $('#sidebar #author-picture').attr('src', details['picture']);
-    
-    
     var detailsHtml = "";
-    
-    // Add name and born data
     detailsHtml += details['name'] + "<br />* " + details['born'];
-    
-    // 
+
     if(details["died"] !== null) {
-        
         detailsHtml += " / † " + details['death'];
     }
     
-    // Set details
     $('#sidebar #author').html(detailsHtml);
 };
 
-/**
- * 
- * @param {type} description
- * @returns {undefined}
- */
 app.setBookDescription = function(description) {
-
-    // set description text
     $('#panel-about #description').html(description + "<br />");
 };
 
-/**
- * 
- * @returns {undefined}
- */
 app.setWikipediaLink = function(url) {
-    
-    // Append wikipedia link if exists
     if(url !== null) {
-        
         $('#panel-about #description').append('<a href="'+ url +'" target"_blank">' + url + '</a>');
     }
 };
@@ -302,15 +226,6 @@ helper.filterEvents = function(events, characters, property, lowerBound, upperBo
 	    	return _.intersection(_.pluck(event.involved, 'name'), characters).length > 0 && event[property] >= lowerBound && event[property] <= upperBound;
 		}
 	});
-};
-
-helper.getRandomColor = function() {
-    var letters = '0123456789ABCDEF'.split('');
-    var color = '#';
-    for (var i = 0; i < 6; i++ ) {
-        color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
 };
 
 function pinSymbol(color, mood) {
