@@ -1,5 +1,9 @@
-StoryMapper
+PinPlot
 ===========
+
+Experience stories in another dimension!
+
+This application was created during Stuttgart Hackathon 2014.
 
 ## Backend
 1. Make sure Node.js and MongoDB are installed.
