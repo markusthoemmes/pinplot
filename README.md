@@ -8,7 +8,7 @@ This application was created during Stuttgart Hackathon 2014.
 ## Backend
 1. Make sure Node.js and MongoDB are installed.
 2. Go to "backend" and run `npm install`.
-3. Run `npm start`.
+3. Run `node index.js`.
 
 ## Frontend
 - Documentation for Template/ Design Framework: 
