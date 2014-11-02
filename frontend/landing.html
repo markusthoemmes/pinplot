@@ -43,7 +43,15 @@
         //
         $(document).ready(function () {
             
-            
+            appData.apiURL = 'http://localhost:8080';
+            appData.getBooks(function(books) {
+                $('#search-input').typeahead({
+                    name: 'accounts',
+                    local: _.pluck(books, 'name')
+                }).on('typeahead:selected', function(e, sugg) {
+                    window.location.href = "file:///C:/Users/markus/Desktop/storymapper/frontend/index.html?book="+sugg.value;
+                });
+            });
             
         });
 

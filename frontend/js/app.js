@@ -6,6 +6,10 @@ var app = {};
 app.run = function(settingsObj) {
 	appData.apiURL = settingsObj.appData.apiURL;
 	appData.getBooks(function(books) {
+        if(decodeURIComponent(querystring('book')[0])) {
+            app.openBook(_.findWhere(books, {name: decodeURIComponent(querystring('book')[0])}));
+        }
+
 		$('#search-input').typeahead({
 	     	name: 'accounts',
 	    	local: _.pluck(books, 'name')
@@ -324,4 +328,11 @@ function pinSymbol(color, mood) {
         strokeWeight: 2,
         scale:1,
    };
+}
+
+function querystring(key) {
+   var re=new RegExp('(?:\\?|&)'+key+'=(.*?)(?=&|$)','gi');
+   var r=[], m;
+   while ((m=re.exec(document.location.search)) !== null) r[r.length]=m[1];
+   return r;
 }
