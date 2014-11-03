@@ -27,9 +27,22 @@ body, h1, h2, h3, h4, h5, a, p, span, i {
 	height: 100vh;
 }
 
+#sidebar div, #sidebar dl {
+	padding-left: 20px;
+}
+
+#book-title {
+  font-family: "FreightSansBold", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; 
+  font-size: 37px;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+
 #author-picture {
 	width: 100px;
 	height: 100px;
+	margin-bottom: 20px;
 	border-radius: 50px;
 	border-color: #EEE;
 	border-style: solid;
